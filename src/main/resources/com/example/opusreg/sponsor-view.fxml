@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.opusreg.SponsorController">
+
+    <children>
+        <Label layoutX="56.0" layoutY="72.0" text="First Name: " />
+        <Label layoutX="265.0" layoutY="72.0" text="Last Name:" />
+        <Label layoutX="56.0" layoutY="112.0" text="Adddress : " />
+        <Label layoutX="56.0" layoutY="153.0" text="City: " />
+        <Label layoutX="283.0" layoutY="153.0" text="State:" />
+        <Label layoutX="407.0" layoutY="153.0" text="Zip: " />
+        <Label layoutX="56.0" layoutY="200.0" text="Phone:" />
+        <Label layoutX="261.0" layoutY="200.0" text="Email: " />
+        <Label layoutX="56.0" layoutY="247.0" text="Food Preference" />
+        <TextField fx:id="fNameTxt" layoutX="136.0" layoutY="68.0" prefHeight="24.0" prefWidth="122.0" />
+        <TextField fx:id="lNameTxt" layoutX="347.0" layoutY="68.0" prefHeight="24.0" prefWidth="149.0" />
+        <TextField fx:id="addyTxt" layoutX="136.0" layoutY="108.0" prefHeight="24.0" prefWidth="362.0" />
+        <TextField fx:id="cityTxt" layoutX="93.0" layoutY="149.0" />
+        <TextField fx:id="zipTxt" layoutX="447.0" layoutY="149.0" prefHeight="24.0" prefWidth="135.0" />
+        <TextField fx:id="phoneTxt" layoutX="112.0" layoutY="196.0" prefHeight="24.0" prefWidth="135.0" />
+        <TextField fx:id="emailTxt" layoutX="306.0" layoutY="196.0" prefHeight="24.0" prefWidth="238.0" />
+        <TextField fx:id="foodPrefTxt" layoutX="176.0" layoutY="243.0" />
+        <Label fx:id="sponsorLbl" layoutX="258.0" layoutY="14.0" text="Sponsor" />
+        <Label layoutX="55.0" layoutY="293.0" text="What company is your sponsorship representing?" />
+        <Label layoutX="55.0" layoutY="328.0" text="Do you have any special dietary requirements? " />
+        <ComboBox fx:id="dietCmbx" layoutX="372.0" layoutY="324.0" prefWidth="150.0" promptText="&lt;Select&gt;" />
+        <ComboBox fx:id="stateCmbx" layoutX="332.0" layoutY="149.0" prefHeight="24.0" prefWidth="68.0" promptText="&lt;Select&gt;" />
+      <TextField fx:id="sponsorRepTxt" layoutX="387.0" layoutY="289.0" />
+      <Button fx:id="submitBtn" layoutX="491.0" layoutY="362.0" mnemonicParsing="false" onAction="#onSubmitButtonClick" text="Button" />
+
+    </children>
+
+</AnchorPane>
