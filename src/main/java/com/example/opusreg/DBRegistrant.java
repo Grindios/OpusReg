@@ -4,6 +4,7 @@ import java.sql.*;
 
 public class DBRegistrant {
 
+    //Makes DB call to save a new registrant
     public static void addRegistrant(String fName, String lName,String address,String city,String state,String zip,String phoneNum,String email,String favFood,String type,String welcomeReception,String shirtSize,String foodReqs,String sponsorRep,String workRegion){
         Connection con = DBConnection.getConnection();
         PreparedStatement pst;
@@ -35,6 +36,7 @@ public class DBRegistrant {
 
     }
 
+    //Gets max ID, is used to compare with max number of registrant number.
     public static int getMaxRegistrant() {
         int regMaxId = 0;
         String maxregIdSQL = "SELECT MAX(idregistrant) FROM opus_registrant.registrant";

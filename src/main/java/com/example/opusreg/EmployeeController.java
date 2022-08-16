@@ -46,10 +46,13 @@ public class EmployeeController implements Initializable {
     @FXML
     Label employeeLbl;
 
+    //ObservableLists used to load ComboBoxes
     ObservableList<String> state = FXCollections.observableArrayList("AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY");
     ObservableList<String> answer = FXCollections.observableArrayList("YES","NO","Maybe");
     ObservableList<String> dietAnswer = FXCollections.observableArrayList("YES","NO");
     ObservableList<String> region = FXCollections.observableArrayList("East", "Central", "West");
+
+    //Submit button
     public void OnActSubmit(ActionEvent event) throws IOException {
         String fName = fNameTxt.getText();
         String lName = lNameTxt.getText();
@@ -68,7 +71,7 @@ public class EmployeeController implements Initializable {
         String sponsorRep = "N/A";
 
 
-
+//pushes values from fields to make the DB call.
         DBRegistrant.addRegistrant(fName,lName,addy,city,state,zip,phone,email,foodPref,type,welcomeReception,shirtSize,foodReqs,sponsorRep,workRegion);
 
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
@@ -77,7 +80,7 @@ public class EmployeeController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
+    //Initializable loads Comboxes with Observable lists
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //Loading the comboboxes

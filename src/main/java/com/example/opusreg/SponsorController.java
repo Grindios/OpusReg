@@ -47,14 +47,18 @@ public class SponsorController implements Initializable {
     @FXML
     Label sponsorLbl;
 
+    //ObservableLists used to load ComboBoxes
     ObservableList<String> state = FXCollections.observableArrayList("AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY");
     ObservableList<String> dietAnswer = FXCollections.observableArrayList("YES","NO");
+
+    //Initializable loads Comboxes with Observable lists
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     stateCmbx.setItems(state);
     dietCmbx.setItems(dietAnswer);
     }
 
+    //Submit button
     public void onSubmitButtonClick(ActionEvent event) throws IOException {
 
         String fName = fNameTxt.getText();
@@ -73,6 +77,7 @@ public class SponsorController implements Initializable {
         String shirtSize = "N/A";
         String sponsorRep = sponsorRepTxt.getText();
 
+        //pushes values from fields to make the DB call.
         DBRegistrant.addRegistrant(fName,lName,addy,city,state,zip,phone,email,foodPref,type,welcomeReception,shirtSize,foodReqs,sponsorRep,workRegion);
 
 

@@ -21,6 +21,7 @@ public class MainController implements Initializable {
     private Label numLbl;
     int totalReg = DBRegistrant.getMaxRegistrant();
 
+    //Employee Button
     @FXML
     protected void onHelloButtonClick(ActionEvent event) throws IOException {
 
@@ -37,6 +38,7 @@ public class MainController implements Initializable {
 
     }
 
+    //Attendee Button
     public void onAttendeeButtonClick(ActionEvent event) throws IOException{
 
         if (totalReg == 20){
@@ -51,6 +53,7 @@ public class MainController implements Initializable {
         }
     }
 
+    //Sponsor Button
     public void onSponsorButtonClick(ActionEvent event) throws IOException{
         if (totalReg == 20){
             JOptionPane.showMessageDialog(null, "Sorry, attendance has reached it's max number of 20!");

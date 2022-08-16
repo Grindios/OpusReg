@@ -26,7 +26,7 @@ public class DBConnection {
             System.out.println("Connection successful");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            System.out.println("1 not successful");
+
         } catch (ClassNotFoundException e) {
             System.out.println(e);
             System.out.println(e.getMessage());
